@@ -52,6 +52,7 @@ export default {
     <AppHeader @type-submit="filterNear"/>
     <!-- MAIN -->
     <AppMain/>
+    <FontAwesomeIcon icon="fa-regular fa-star" />
 </template>
 
 <!-- CSS -->

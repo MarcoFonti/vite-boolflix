@@ -27,6 +27,10 @@ export default {
         // URL POSTER
         posterUrl() {
             return `${this.baseUrl}/${this.list.poster_path}`
+        },
+
+        listVote() {
+            return Math.floor(this.list.vote_average / 2)
         }
 
     }
@@ -45,7 +49,7 @@ export default {
             <img v-if="listFlags" :src="flagUrl" :alt="list.original_language">
             <span v-else>{{ list.original_language }}</span>
         </li>
-        <li>{{ list.vote_average }}</li>
+        <li>{{ listVote }}</li>
         <img :src="posterUrl" :alt="list.title || list.name">
     </ul>
 </template>

@@ -15,7 +15,7 @@ export default {
         imageUrl: 'https://image.tmdb.org/t/p/w342'   
     }),
     // COMPONENTI
-    components: { ListCard }
+    components: { ListCard },
     
 };
 </script>
