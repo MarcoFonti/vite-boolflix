@@ -6,7 +6,8 @@ export default {
     name: 'ListCard',
     // PROPS
     props: {
-        list: Object
+        list: Object,
+        baseUrl: String
     },
     // COMPUTED
     computed: {
@@ -21,7 +22,13 @@ export default {
         flagUrl() {
             const url = new URL(`../assets/img/${this.list.original_language}.png`, import.meta.url);
             return url.href
+        },
+
+        // URL POSTER
+        posterUrl() {
+            return `${this.baseUrl}/${this.list.poster_path}`
         }
+
     }
     
 
@@ -39,6 +46,7 @@ export default {
             <span v-else>{{ list.original_language }}</span>
         </li>
         <li>{{ list.vote_average }}</li>
+        <img :src="posterUrl" :alt="list.title || list.name">
     </ul>
 </template>
 

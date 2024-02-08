@@ -11,7 +11,8 @@ export default {
     name: 'AppMain',
     // DATI
     data: () => ({
-        store
+        store,
+        imageUrl: 'https://image.tmdb.org/t/p/w342'   
     }),
     // COMPONENTI
     components: { ListCard }
@@ -25,11 +26,11 @@ export default {
     <main id="recipe-list">
         <section class="recipe-films">
             <h1>film</h1>
-            <ListCard v-for="film in store.films" :key="film.id" :list="film"/>
+            <ListCard v-for="film in store.films" :key="film.id" :list="film" :baseUrl="imageUrl"/>
         </section>
         <section class="recipe-series">
             <h1>serie</h1>
-            <ListCard v-for="serie in store.series" :key="serie.id" :list="serie"/>
+            <ListCard v-for="serie in store.series" :key="serie.id" :list="serie" :baseUrl="imageUrl"/>
         </section>
     </main>
 </template>
@@ -37,8 +38,10 @@ export default {
 <!-- CSS -->
 <style scoped lang="scss">
 
+// RECIPENTE LISTA 
 #recipe-list {
 
+    // TITOLO FILM E SERIE
     h1 {
         text-transform: uppercase;
     }
