@@ -1,6 +1,7 @@
 <!-- JS -->
 <script>
 export default {
+    // NOME 
     name: 'AppMain',
     
 };
