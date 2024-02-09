@@ -19,7 +19,7 @@ export default {
 
         // BANDIERE O SCITTA NAZIONE
         listFlags() {
-            const flags = ['it', 'en', 'fr'];
+            const flags = ['it', 'en', 'fr', 'ja'];
             return flags.includes(this.list.original_language);
         },
 
@@ -50,9 +50,8 @@ export default {
 
     },
 
-    
-
 };
+
 </script>
 
 <!-- HTML -->
@@ -136,6 +135,5 @@ ul {
     }
 
 }
-
 
 </style>

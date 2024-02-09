@@ -13,6 +13,7 @@ export default {
     emits: ['type-submit']
     
 };
+
 </script>
 
 <!-- HTML -->
