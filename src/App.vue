@@ -52,7 +52,6 @@ export default {
     <AppHeader @type-submit="filterNear"/>
     <!-- MAIN -->
     <AppMain/>
-    <FontAwesomeIcon icon="fa-regular fa-star" />
 </template>
 
 <!-- CSS -->
@@ -61,6 +60,8 @@ export default {
 /* BODY */
 body {
     height: 100vh;
+    margin: 0px;
+    background-color: #595959
 }
 
 </style>

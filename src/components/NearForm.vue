@@ -1,5 +1,6 @@
 <!-- JS -->
 <script>
+
 export default {
     // NOME
     name: 'NearForm',
@@ -16,6 +17,7 @@ export default {
     emits: ['option-submit']
     
 };
+
 </script>
 
 <!-- HTML -->
@@ -49,7 +51,15 @@ form {
         border: 1px solid #ff0000;
         color: #ffffff;
         text-transform: uppercase;
+        cursor: pointer;
+
+        // AL CLICK
+        &:active {
+            background-color: #ff0000;
+        }
+
     }
+    
 }
 
 </style>
