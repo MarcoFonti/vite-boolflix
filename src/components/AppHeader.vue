@@ -34,13 +34,15 @@ export default {
     align-items: center;
     justify-content: space-between;
     background-color: #000000;
-    padding: 10px;
+    padding: 0px 20px;
 
     // TITOLO
     h1 {
         color: #ff0000;
         text-transform: uppercase;
+        font-size: 50px;
     }
+
 }
 
 </style>

@@ -4,12 +4,13 @@ import App from './App.vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 // IMPORTO COMPONENTE
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-// IMPORTO ICONE
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar } from '@fortawesome/free-regular-svg-icons'
+// IMPORTO ICONA
+import { faStar as solidFaStar } from '@fortawesome/free-solid-svg-icons';
+// IMPORTO ICONA
+import { faStar as regularFaStar } from '@fortawesome/free-regular-svg-icons'; 
 
 // ICONE DA CARICARE
-library.add(faStar, faStar);
+library.add(solidFaStar, regularFaStar);
 
 const app = createApp(App)
 
