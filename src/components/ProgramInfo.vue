@@ -62,10 +62,4 @@ button {
     display: none;
 }
 
-
-
-
-
-
-
 </style>

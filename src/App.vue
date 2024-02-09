@@ -5,8 +5,10 @@
 import AppHeader from './components/AppHeader.vue';
 // IMPORTO MAIN
 import AppMain from './components/AppMain.vue';
+// IMPORTO SFONDO PRINCIPALE
+import StyleBackground from './components/StyleBackground.vue';
 // IMPORTO STORE
-import { store } from './data/store'
+import { store } from './data/store';
 // IMPORTO AXIOS
 import axios from 'axios';
 // VARIABILE API FILMS
@@ -18,9 +20,10 @@ export default {
     // NOME
     name: 'AppBoolFlix',
     // COMPONENTI
-    components: { AppHeader, AppMain },
+    components: { AppHeader, AppMain, StyleBackground },
     // FUNZIONI
     methods: {
+
         // RICERCA FILM
         fetchResearchFilms(endpointFilms) {
             axios.get(endpointFilms).then(res => {
@@ -28,6 +31,7 @@ export default {
                 console.log('film',store.films)
             }).catch(err => { console.error(err) })
         },
+
         // RICERCA SERIE
         fetchResearchSeries(endpointSeries) {
             axios.get(endpointSeries).then(res => {
@@ -35,6 +39,7 @@ export default {
                 console.log('serie',store.series)
             }).catch(err => { console.error(err) })
         },
+
         // FILTRO FILM E SERIE
         filterNear(event) {
           const endpointFilms = `https://api.themoviedb.org/3/search/movie?query=${event}&api_key=971f2abd7046b54105bad103b5cb00e3&language=it-IT`;
@@ -44,12 +49,15 @@ export default {
         }
     }
 };
+
 </script>
 
 <!-- HTML -->
 <template>
     <!-- HEADER -->
     <AppHeader @type-submit="filterNear"/>
+    <!-- SFONDO -->
+    <StyleBackground/>
     <!-- MAIN -->
     <AppMain/>
 </template>
