@@ -1,47 +1,81 @@
 <!-- JS -->
 <script>
 
+
+/* ESPORTAZIONE */
 export default {
-    // NOME
+
+
+    /* NOME PAGINA */
     name: 'ProgramInfo',
-    // DATI
+
+
+    /* DATI DI BASE DA UTILIZZARE NEL TEMPLATE */
     data: () => ({
-        isVisible: true
+
+
+        /* VISIBILITA' DEL TESTO */
+        isVisible: false
     }),
-    // PROPS
+
+
+    /* PROPS CHE RICEVE UNA STRINGA (DA LISTCARD) */
     props: {
         test: String
     },
-    // COMPUTED 
-    computed : {
-        // BOTTONE INFO
+
+
+    /* INTERAGISCO CON LA FUNZIONE DATA() */
+    computed: {
+
+
+        /* TOGLE DEL BOTTONE */
         toggleVisibility() {
             this.isVisible = !this.isVisible
         },
 
-        // CLICK INFO
+
+        /* CLICK TESTO BOTTONE */
         clickToggle() {
-            if(this.isVisible){
+
+
+            /* SE IL TESTO E' NASCOSTO */
+            if (this.isVisible === false) {
+
+
+                /* RESTITUISCI */
                 return 'info'
+
+
+                /* ALTRIMENTI */
             } else {
+
+
+                /* RESTITUISCI */
                 return 'chiudi'
             }
         }
     }
 };
+
 </script>
+
 
 <!-- HTML -->
 <template>
+
     <div class="recipe-plot">
+        <!-- AL CLCIK SUL BOTTONE RICHIAMO LA COMPUTEND DEL TOGGLE E LA COMPUTED DELLA SCRITTA -->
         <button @click="toggleVisibility">{{ clickToggle }}</button>
-        <p :class="{ 'hidden' : isVisible }">{{ test }}</p>
+        <!-- TESTO CHE PARTE NON VISIBILE -->
+        <p :class="{ 'hidden': isVisible === false }">{{ test }}</p>
     </div>
+
 </template>
+
 
 <!-- CSS -->
 <style scoped lang="scss">
-
 // BOOTNE
 button {
     background-color: transparent;
@@ -61,5 +95,4 @@ button {
 .hidden {
     display: none;
 }
-
 </style>

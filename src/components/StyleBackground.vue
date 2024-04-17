@@ -1,34 +1,49 @@
 <!-- JS -->
 <script>
 
-// IMPORTO STORE
-import { store } from '../data/store';
+/* IMPORTO STORE */
+import { store } from '../date/store';
 
+
+/* ESPORTAZIONE */
 export default {
-    // NOME
+
+
+    /* NOME PAGINA */
     name: 'StyleBackground',
-    // DATI
+
+
+    /* DATI DI BASE DA UTILIZZARE NEL TEMPLATE */
     data: () => ({
+
+
+        /* RECUPERO STORE */
         store,
+
+
+        /* ALT IMMAGINE */
         alt: 'Sfondo BoolFlix'
     })
-    
+
 };
 
 </script>
 
+
 <!-- HTML -->
 <template>
-    <!-- RECIPIENTE SFONDO -->
+
+    <!-- SE LA LUNGHEZZA DEL'ARRAY DEI FILM E' IDENTICA A 0 MOSTRA IL RECIPIENTE SFONDO  -->
     <div v-if="store.films.length === 0" class="recipe-background">
         <img src="../../public/sfondo.jpg" :alt="alt">
         <h1>Benvenuto in BoolFlix</h1>
     </div>
+
 </template>
+
 
 <!-- CSS -->
 <style scoped lang="scss">
-
 // SFONDO
 .recipe-background {
     min-height: 700px;
@@ -43,7 +58,7 @@ export default {
         left: 50%;
         translate: -50% -50%;
         border-bottom: 10px double black;
-    
+
     }
 
     // IMMAGINE
@@ -54,5 +69,4 @@ export default {
     }
 
 }
-
 </style>
